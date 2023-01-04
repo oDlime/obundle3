@@ -17,7 +17,6 @@ const readDir = (entry,mfname) => {
             if (dirInfo[i].includes('.md')){
                 dircontent.files.push(dirInfo[i].replace('.md',''));
             }
-
         }
     }
     return dircontent;
