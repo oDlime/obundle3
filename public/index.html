@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+      <link rel="stylesheet" href="https://unpkg.com/docute@4/dist/docute.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.3/jquery.js"></script>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+      <style>
+          #docute{
+
+          }
+          #app{
+              float: left;
+              position: fixed;
+              overflow-x: hidden;
+              height: 100vh;
+              padding-bottom: 100px;
+              width: 300px;
+          }
+          .Sidebar{
+              display: none;
+          }
+          /* 设置滚动条的样式 */
+          ::-webkit-scrollbar {
+              width: 6px;
+              height: 6px;
+          }
+          /* 滚动槽 */
+          ::-webkit-scrollbar-track {
+              border-radius: 10px;
+          }
+          /* 滚动条滑块 */
+          ::-webkit-scrollbar-thumb {
+              border-radius: 5px;
+              background: rgba(164, 162, 158, 0.9);
+          }
+          ::-webkit-scrollbar-thumb:window-inactive {
+              background: rgba(164, 156, 156, 0.2);
+          }
+      </style>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+
+    <div id="app"></div>
+    <div id="docute"></div>
+
+    <script src="https://unpkg.com/docute@4/dist/docute.js"></script>
+    <script>
+        new Docute({
+            target: '#docute',
+            layout: 'wide'
+        })
+
+
+    </script>
+  </body>
+</html>
